@@ -1,0 +1,95 @@
+.signup-header-container {
+  display: grid;
+  justify-items: center;
+}
+
+input {
+  font-size: 14px;
+}
+
+.signup-grid {
+  display: grid;
+  justify-content: center;
+}
+
+.signup-form-input {
+  border:0;
+  padding:10px;
+  border:solid 1px #ccc;
+  width:300px;
+  border-radius: 4px;
+}
+
+.input-error-message {
+  font-size: 12px;
+  color: red;
+}
+
+.signup-label {
+  margin-bottom: 8px;
+  font-size: 12px;
+}
+
+// 登録ボタン(活性・非活性)
+.signup-button {
+  width: 320px;
+  height: 40px;
+  border-radius: 6px;
+  background-color: #71C7EB;
+  font-size: 15px;
+  align-items: center;
+  justify-content: space-evenly;
+  display: flex;
+  color: white;
+  font-weight: 600;
+  border: none;
+  cursor: pointer;
+  background-color: #71C7EB;
+  margin-top: 20px;
+}
+
+.not-input-button {
+  width: 320px;
+  height: 40px;
+  border-radius: 6px;
+  background-color: #71C7EB;
+  font-size: 15px;
+  align-items: center;
+  justify-content: space-evenly;
+  display: flex;
+  color: white;
+  font-weight: 600;
+  border: none;
+  background-color: gray;
+  margin-top: 20px;
+}
+
+.signup-button:hover {
+  background-color: #9acde2;
+}
+
+.redirect-login {
+  padding: 22px;
+  font-size: 16px;
+  color: #71C7EB;;
+}
+
+.loading {
+  width: 18px;
+  height: 18px;
+  margin: 10px auto;
+  border: 4px #ddd solid;
+  border-top: 4px #081c24 solid;
+  border-radius: 50%;
+  animation: sp-anime 1.0s infinite linear;
+}
+
+@keyframes sp-anime {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.input-name-and-validate {
+  margin-top: 20px;
+}

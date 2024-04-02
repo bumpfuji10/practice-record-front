@@ -1,0 +1,103 @@
+.header-container {
+  display: grid;
+  height: 40px;
+  justify-content: space-around;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  justify-items: center;
+  margin: 8px 0 8px 0;
+}
+
+img.user-icon {
+  padding: 2px;
+  width: 30px;
+  height: 30px;
+  border: solid 3px black;
+  border-radius: 50%;
+  background-color: white;
+  cursor: pointer;
+  align-items: center;
+  display: flex;
+}
+
+.button-and-icon {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  align-content: space-around;
+  justify-content: center;
+  align-items: center;
+  justify-items: center;
+}
+
+.loginAndNewAccount {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  align-content: space-around;
+  justify-content: center;
+  align-items: center;
+  justify-items: center;
+  grid-gap: 10px;
+}
+
+.write-record, .new-account {
+  width: 80px;
+  height: 30px;
+  border-radius: 6px;
+  background-color: #71C7EB;
+  font-size: 15px;
+  align-items: center;
+  text-align: center;
+  justify-content: space-evenly;
+  display: flex;
+  color: white;
+  font-weight: 600;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+}
+
+.login {
+  width: 80px;
+  height: 30px;
+  border-radius: 6px;
+  background-color: #71C7EB;
+  font-size: 15px;
+  align-items: center;
+  text-align: center;
+  justify-content: space-evenly;
+  display: flex;
+  color: white;
+  font-weight: 600;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  background-color: white;
+  color: #71C7EB;
+  border: solid 2px #71C7EB;
+}
+
+.login:hover {
+  background-color: #abdbef;
+  color: white;
+}
+
+.new-account:hover {
+  background-color: whitesmoke;
+  color: #71C7EB;
+  border: solid 2px #abdbef;
+}
+
+.gyraph-logo {
+  height: 40px;
+  width: 100px;
+  justify-content: center;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  background-color: #71C7EB;
+  border-radius: 6px;
+  color: white;
+  cursor: pointer;
+  letter-spacing: 1.72px;
+  font-weight: 600;
+}
