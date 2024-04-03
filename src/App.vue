@@ -5,7 +5,6 @@ import NotLoginHeader from './components/NotLoginHeader.vue';
 
 <template>
   <div>
-    <NotLoginHeader></NotLoginHeader>
     <router-view></router-view>
   </div>
 </template>

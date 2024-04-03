@@ -6,4 +6,4 @@ export const getUsers = () => {
 
 export const createUser = (params) => {
   return axios.post(`http://localhost:3000/api/v1/users`, { user: params })
-}
+};
