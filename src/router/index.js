@@ -4,8 +4,7 @@ import Login from "./../components/pages/Login.vue";
 import PracticeRecordIndex from "./../components/pages/PracticeRecordIndex.vue"
 
 const routes = [
-  { path: '/', component: PracticeRecordIndex },
-  { path: '/signup', component: Signup },
+  { path: '/', component: Signup },
   { path: '/login', component: Login },
 ];
 
