@@ -1,9 +1,9 @@
-import axios from "axios";
+import { axiosInstance } from "../axiosInstanceConfig";
 
 export const getUsers = () => {
-  return axios.get(`http://localhost:3000/api/v1/users`);
+  return axiosInstance.get("/api/v1/users");
 };
 
 export const createUser = (params) => {
-  return axios.post(`http://localhost:3000/api/v1/users`, { user: params })
+  return axiosInstance.post("/api/v1/users", { user: params });
 };
