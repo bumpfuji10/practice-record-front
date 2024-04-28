@@ -44,7 +44,7 @@
 
 <script>
 import { ErrorMessage, Field, Form } from 'vee-validate';
-import NotLoginHeader from '../NotLoginHeader.vue';
+import NotLoginHeader from '../parts/NotLoginHeader.vue';
 import './../../customValidations';
 import { loginUser } from '../../resources/user_login';
 
@@ -75,6 +75,7 @@ export default {
       try {
         const response = await loginUser(this.loginUserParams)
         this.$store.dispatch('login', response.data.token)
+        this.$router.push('/')
       } catch(e) {
         console.error(e)
       }
