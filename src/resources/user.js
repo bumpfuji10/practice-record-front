@@ -7,3 +7,4 @@ export const getUsers = () => {
 export const createUser = (params) => {
   return axiosInstance.post("/api/v1/users", { user: params });
 };
+
