@@ -5,6 +5,7 @@ import PracticeRecordIndex from "./../components/pages/PracticeRecordIndex.vue"
 
 const routes = [
   { path: '/', component: Signup },
+  { path: "/signup", component: Signup },
   { path: '/login', component: Login },
 ];
 
