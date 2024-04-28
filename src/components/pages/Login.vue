@@ -74,7 +74,6 @@ export default {
     async submitLogin () {
       try {
         const response = await loginUser(this.loginUserParams)
-        console.log(response)
       } catch(e) {
         console.error(e)
       }
