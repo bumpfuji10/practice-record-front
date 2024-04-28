@@ -74,6 +74,7 @@ export default {
     async submitLogin () {
       try {
         const response = await loginUser(this.loginUserParams)
+        this.$store.dispatch('login', response.data.token)
       } catch(e) {
         console.error(e)
       }
