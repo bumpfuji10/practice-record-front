@@ -2,17 +2,22 @@ import { createStore } from 'vuex';
 
 const store = createStore({
   state: {
-    authToken: null
+    authToken: localStorage.getItem('authToken') || null
   },
   mutations: {
     setAuthToken(state, token) {
       state.authToken = token;
+      localStorage.setItem('authToken', token)
+    },
+    clearAuthToken(state) {
+      state.authToken = null
+      localStorage.removeItem('authToken')
     }
   },
   actions: {
     login({ commit }, token) {
       commit('setAuthToken', token);
-      localStorage.setItem('authToken', token);
+      localStorage.setItem('authToken', token); // トークンをローカルストレージに保存
     },
     logout({ commit }) {
       commit('setAuthToken', null);
