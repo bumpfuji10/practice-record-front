@@ -113,12 +113,17 @@ img.user-icon {
 
 .userIcon {
   margin-top: 20px;
-  border: 2px solid black;
   border-radius: 50%;
   width: 40px;
   height: 40px;
+  border: 1px solid black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   cursor: pointer;
 }
+
+//
 
 .base-header-button {
   width: 100px;

@@ -8,7 +8,9 @@
         <div class="rightNavs">
           <button class="base-header-button">日誌を書く</button>
           <div style="position: relative;">
-            <img src="/src/assets/user.svg" alt="" class="userIcon" @click="openSettingsToggle($event)">
+            <div class="userIcon" style="">
+              <img src="/src/assets/user.svg" alt="" @click="openSettingsToggle($event)">
+            </div>
             <header-toggle ref="toggle" :is_show_toggle="is_show_toggle"/>
           </div>
         </div>
