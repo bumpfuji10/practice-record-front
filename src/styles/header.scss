@@ -112,9 +112,27 @@ img.user-icon {
 }
 
 .userIcon {
+  margin-top: 20px;
   border: 2px solid black;
   border-radius: 50%;
   width: 40px;
   height: 40px;
   cursor: pointer;
+}
+
+.base-header-button {
+  width: 100px;
+  height: 40px;
+  border-radius: 6px;
+  background-color: #71C7EB;
+  font-size: 15px;
+  align-items: center;
+  justify-content: space-evenly;
+  display: flex;
+  color: white;
+  font-weight: 600;
+  border: none;
+  cursor: pointer;
+  background-color: #71C7EB;
+  margin-top: 20px;
 }

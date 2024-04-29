@@ -6,7 +6,7 @@
           <router-link to="/">Gyraph</router-link>
         </nav>
         <div class="rightNavs">
-          <button>日誌を書く</button>
+          <button class="base-header-button">日誌を書く</button>
           <div style="position: relative;">
             <img src="/src/assets/user.svg" alt="" class="userIcon" @click="openSettingsToggle($event)">
             <header-toggle ref="toggle" :is_show_toggle="is_show_toggle"/>
