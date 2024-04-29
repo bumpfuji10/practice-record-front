@@ -1,0 +1,47 @@
+// ログインヘッダーのユーザーアイコンをクリックすると表示されるトグルメニュー
+.setting-toggle {
+  position: absolute;
+  top: 50px;
+  left: -100px;
+  border: 1px solid gray;
+  border-radius: 6px;
+  width: 160px;
+  height: 175px;
+  z-index: 100;
+  background-color: #ffffffff;
+}
+
+.close-button-flex {
+  display: flex;
+  justify-content: end;
+}
+
+.toggle-ul {
+  padding-top: 15px;
+}
+.user-icon {
+  width: 15px;
+  cursor: pointer;
+}
+
+.toggle-list {
+  color: rgb(73, 70, 70);
+  font-size: 15px;
+  cursor: pointer;
+  margin: 0 10px 0 10px;
+  display: flex;
+  gap: 3px;
+  align-items: center;
+  border-radius: 6px;
+}
+
+.toggle-list:hover {
+  background-color: rgb(236, 232, 232);
+
+}
+
+.toggle-list-icon {
+  width: 15px;
+  height: 15px;
+  margin-left: 8px;
+}
