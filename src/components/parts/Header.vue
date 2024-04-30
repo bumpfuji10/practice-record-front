@@ -9,9 +9,9 @@
           <button class="base-header-button">日誌を書く</button>
           <div style="position: relative;">
             <div class="userIcon" style="">
-              <img src="/src/assets/user.svg" alt="" @click="openSettingsToggle($event)">
+              <img src="/src/assets/user.svg" alt="" @click="openSettingsDropdown($event)">
             </div>
-            <dropdown-menu ref="toggle" :is_show_toggle="is_show_toggle"/>
+            <dropdown-menu ref="dropdown" :is_show_dropdown="is_show_dropdown"/>
           </div>
         </div>
       </div>
@@ -28,7 +28,7 @@ export default {
   },
   data() {
     return {
-      is_show_toggle: false
+      is_show_dropdown: false
     }
   },
   mounted() {
@@ -38,22 +38,22 @@ export default {
     document.removeEventListener('click', this.handleClickOutside)
   },
   methods: {
-    openSettingsToggle(event) {
+    openSettingsDropdown(event) {
       event.stopPropagation()
-      this.is_show_toggle = !this.is_show_toggle;
+      this.is_show_dropdown = !this.is_show_dropdown;
     },
-    closeToggle() {
-      this.is_show_toggle = false
+    closeDropdown() {
+      this.is_show_dropdown = false
     },
     handleClickOutside(event) {
       // トグルコンポーネントのDOMを取得
-      const toggleElement = this.$refs.toggle? this.$refs.toggle.$el : null
+      const dropdownElement = this.$refs.dropdown? this.$refs.dropdown.$el : null
 
       // イベントがトグル内で発生した場合、何もしない
-      if (toggleElement && toggleElement.contains(event.target)) {
+      if (dropdownElement && dropdownElement.contains(event.target)) {
         return;
       }
-      this.is_show_toggle = false;
+      this.is_show_dropdown = false;
     }
   }
 }
