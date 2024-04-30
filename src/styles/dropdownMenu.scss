@@ -1,5 +1,5 @@
 // ログインヘッダーのユーザーアイコンをクリックすると表示されるトグルメニュー
-.setting-toggle {
+.setting-dropdown {
   position: absolute;
   top: 50px;
   left: -100px;
@@ -16,7 +16,7 @@
   justify-content: end;
 }
 
-.toggle-ul {
+.dropdown-ul {
   padding-top: 15px;
 }
 .user-icon {
@@ -24,7 +24,7 @@
   cursor: pointer;
 }
 
-.toggle-list {
+.dropdown-list {
   color: rgb(73, 70, 70);
   font-size: 15px;
   cursor: pointer;
@@ -35,12 +35,12 @@
   border-radius: 6px;
 }
 
-.toggle-list:hover {
+.dropdown-list:hover {
   background-color: rgb(236, 232, 232);
 
 }
 
-.toggle-list-icon {
+.dropdown-list-icon {
   width: 15px;
   height: 15px;
   margin-left: 8px;
