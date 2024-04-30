@@ -11,7 +11,7 @@
             <div class="userIcon" style="">
               <img src="/src/assets/user.svg" alt="" @click="openSettingsToggle($event)">
             </div>
-            <header-toggle ref="toggle" :is_show_toggle="is_show_toggle"/>
+            <dropdown-menu ref="toggle" :is_show_toggle="is_show_toggle"/>
           </div>
         </div>
       </div>
@@ -20,11 +20,11 @@
 </template>
 
 <script>
-import HeaderToggle from './HeaderToggle.vue'
+import DropdownMenu from './DropdownMenu.vue'
 
 export default {
   components: {
-    HeaderToggle
+    DropdownMenu
   },
   data() {
     return {

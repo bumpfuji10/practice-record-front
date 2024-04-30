@@ -14,7 +14,7 @@
       日誌を書く
     </li>
     <br>
-    <li class="toggle-list">
+    <li class="toggle-list" @click="submitLogout">
       <img src="/src/assets/logout.svg" alt="" class="toggle-list-icon">
       ログアウト
     </li>
@@ -23,7 +23,19 @@
 </template>
 
 <script>
+import { logoutUser } from '../../resources/user_logout'
+
 export default {
-  props: ["is_show_toggle"]
+  props: ["is_show_toggle"],
+  methods: {
+    submitLogout() {
+      try {
+        const response = logoutUser()
+        console.log(response)
+      } catch(e) {
+        console.error(e)
+      }
+    },
+  }
 }
 </script>
