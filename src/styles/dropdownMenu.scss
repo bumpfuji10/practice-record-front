@@ -3,12 +3,13 @@
   position: absolute;
   top: 50px;
   left: -100px;
-  border: 1px solid gray;
+  border: 1px solid rgb(212, 230, 241);
   border-radius: 6px;
   width: 160px;
   height: 175px;
   z-index: 100;
   background-color: #ffffffff;
+  box-shadow: 0 0 0 1px #96a3b31a, 0 8px 28px -4px #96a3b34d;
 }
 
 .close-button-flex {
