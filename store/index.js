@@ -1,31 +1,55 @@
 import { createStore } from 'vuex';
 
+const storage = window.localStorage
+const keys = { exp: "exp" }
+
+function setStorage(exp) {
+  storage.setItem(keys.exp, exp * 1000)
+};
+
+function removeStorage () {
+  for (const key of Object.values(keys)) {
+    storage.removeItem(key)
+  }
+};
+
+function getExpire () {
+  return storage.getItem(key.exp)
+};
+
+function isAuthenticated () {
+  return new Date().getTime() < this.getExpire()
+};
+
 const store = createStore({
   state: {
-    authToken: localStorage.getItem('authToken') || null
+    current: {
+      user: null,
+    }
   },
+  getters: {},
   mutations: {
-    setAuthToken(state, token) {
-      state.authToken = token;
-      localStorage.setItem('authToken', token)
+    // login ({ exp, user }) {
+    //   this.setStorage(exp)
+    //   this.store.dispatch('getCurrentUser', user)
+    // },
+    logout () {
+      this.$axios.$delete('/api/v1/user_token')
+      this.removeStorage()
+      this.store.dispatch('getCurrentUser', null)
     },
-    clearAuthToken(state) {
-      state.authToken = null
-      localStorage.removeItem('authToken')
+    setCurrentUser(state, payload) {
+      state.current.user = payload
     }
   },
   actions: {
-    login({ commit }, token) {
-      commit('setAuthToken', token);
-      localStorage.setItem('authToken', token); // トークンをローカルストレージに保存
+    getCurrentUser ({ commit }, user) {
+      commit('setCurrentUser', user)
     },
-    logout({ commit }) {
-      commit('setAuthToken', null);
-      localStorage.removeItem('authToken');
+    login({ commit }, { exp, user }) {
+      setStorage(exp);
+      commit('setCurrentUser', user)
     }
-  },
-  getters: {
-    isLoggedIn: state => !!state.authToken
   }
 });
 
